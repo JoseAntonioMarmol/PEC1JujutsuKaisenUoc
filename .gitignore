@@ -5,3 +5,6 @@ node_modules
 coverage/
 .vscode/
 package-lock.json
+dist
+.parcel-cache
+
