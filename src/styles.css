@@ -1,5 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 body {
     height: 100vh;
     color: #1f1f1f;
     background: linear-gradient(to bottom, #bada55, #c0ffee);
+  }
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-weight: bold;
+    color: chocolate;
   }
