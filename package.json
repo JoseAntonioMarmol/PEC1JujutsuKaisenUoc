@@ -21,6 +21,10 @@
     "parcel": "latest",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.10.2"
   }
 }
