@@ -1,22 +1,219 @@
+@import './fonts.sass'
+@import './colors.sass'
+@import './breakpoints.sass'
+
 *
     padding: 0
     margin: 0
     box-sizing: border-box
+    font-family: $ftext
 
 body
     margin:  1rem 0
-    height: 100vh
-    color: #1f1f1f
-    background: linear-gradient(to bottom, #bada55, #c0ffee)
+    // height: 100vh
+    color: $c_txt_main
+    background: $c_txt_secondary
+    @include fallback
+    font-size: $fsize_standard
+    @include wearables
+    font-size: $fsize_extrasmall
+    @include phones
+    font-size: $fsize_small
+    @include tablets
+    font-size: $fsize_small
+    @include hugeDevices
+    font-size: $fsize_big
 
 .main_container
   margin: 0 auto
   display: flex
   flex-direction: column
 
-h1
- font-size: 3rem
- text-align: center
- margin: 2rem 0
- font-weight: bold
- color: pink
+main, header, footer
+  border: 1px $c_txt_main dotted
+
+footer
+  text-align: center
+  position: relative
+  &::before
+    content: ''
+    background-color: $c_txt_secondary
+    position: absolute
+    height: 2px
+    width: 100%
+    top: 0
+    left: 0
+
+.footer--flex
+  display: flex
+
+h1, h2
+  color: $c_txt_main
+   font-family: $ftitle
+  padding-top: 1.2rem
+  text-transform: uppercase
+  font-size: 1.2em
+// h1
+//  font-size: 3rem
+//  text-align: center
+//  margin: 2rem 0
+//  font-weight: bold
+//  color: pink
+
+p
+  padding: .25rem 0
+
+ul, ol
+  padding: .3rem 0
+  // list-style: none
+
+li
+  list-style: none
+
+a
+  text-decoration: dotted
+  &:hover, &:active
+    color: $c_txt_highlight
+    text-decoration: underline
+    font-weight: bold
+header
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+nav
+  margin-bottom: .5rem
+  width: 100%
+  position: relative
+  &::before
+    content: ''
+    background-color: $c_txt_secondary
+    position: absolute
+    height: 1px
+    width: 100%
+    top: 0
+    left: 0
+  &::after
+    content: ''
+    background-color: $c_txt_secondary
+    position: absolute
+    height: 1px
+    width: 100%
+    top: 100%
+    left: 0
+
+
+.navMenu
+  display: flex
+  flex-wrap: wrap
+  @include fallback
+    flex-direction: row
+    justify-content: center
+    align-items: center
+  & > li
+    display: inline-block
+    list-style: none
+    text-align: center
+    border-radius: .25rem
+    @include fallback
+      color: $c_txt_main
+      margin: .25rem 1rem .05rem 0
+      padding: 0 .25rem
+      min-width: 10rem
+    @include wearablesAndPhones
+      margin: .3rem .75rem .3rem .75rem
+      padding: .1rem .25rem
+      min-width: 40vw
+      font-size: $fsize_standard
+    & a
+      color: cyan
+      font-weight: bold
+      position: relative
+      &::after
+        @include mostPc
+          content: ''
+          height: 1px
+          width: 120%
+          background: cyan
+          position: absolute
+          top: 100%
+          left: -10%
+      &:hover
+        text-decoration: none
+
+
+.flexcontainer__left
+  flex-grow: 1
+  @include fallback
+    min-width: 15rem
+  @include wearablesAndPhones
+    min-width: 85vw
+    width: 90%
+
+.flexcontainer__right
+  @include fallback
+    flex-grow: 3
+  @include wearablesAndPhones
+    flex-grow: 1
+    width: 90%
+
+.inherit
+  font-size: inherit
+  font-family: inherit
+  font-style: inherit
+  font-weight: inherit
+  color: inherit
+  background-color: inherit
+  padding: inherit
+  margin: inherit
+  border: inherit
+  border-radius: inherit
+
+.inherit--text
+  font-size: inherit
+  font-family: inherit
+  font-style: inherit
+  font-weight: inherit
+  color: inherit
+
+.embedded-video
+  position: relative
+  margin: 0 auto
+  padding-bottom: 56.25%
+  padding-top: 0
+  height: 0
+  @include wearables
+    max-width: 100vw
+  @include phones
+    max-width: 97vw
+  @include tablets
+    max-width: 94vw
+  @include noHD
+    max-width: 91vw
+  @include SHD
+    max-width: 86vw
+  @include QHD
+    max-width: 82vw
+  @include HD4K
+    max-width: 30vw
+  & > iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    max-height: 1080px
+    border: none
+
+.before
+  width: inherit
+  position: relative
+  & > p
+    text-align: left
+  &::before
+    content: ''
+    display: block
+    width: 100%
+    height: 1px
+    position: absolute
+    top: 0
