@@ -48,3 +48,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 3000);
 });
+document.querySelector('.side-menu').addEventListener('click', function() {
+    var sideMenu = document.querySelector('.side-menu');
+    var iframe = document.getElementById('ytIframe');
+
+    // Cambia el estado de apertura del side-menu
+    sideMenu.classList.toggle('open');
+
+    // Comprueba si el side-menu está abierto
+    if (sideMenu.classList.contains('open')) {
+      // Si el side-menu está abierto, oculta el iframe
+      iframe.style.display = 'none';
+    } else {
+      // Si el side-menu está cerrado, muestra el iframe
+      iframe.style.display = 'block';
+    }
+
+    // Cambia el estado de apertura del side-menu
+    // sideMenu.classList.toggle('open');
+});

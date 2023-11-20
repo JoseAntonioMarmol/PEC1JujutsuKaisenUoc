@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
-    <title>Jujutsu Kaisen Anime</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./styles/styles.sass"/>
-    <script type="module" src="./app.js"></script>
+  <meta charset="UTF-8" />
+  <title>Jujutsu Kaisen Anime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/styles.sass" />
+  <script type="module" src="./app.js"></script>
 </head>
-<body>
-    <div class="main_container">
-      <include src="./src/header.html"></include>
-<main>
-    <section>
-      <h2>Hechiceros</h2>
-      <ul>
-        <li><a href="./detail-yuji.html">Yuji Itadori</a></li>
-        <li><a href="./detail-gojo.html">Satoru Gojo</a></li>
-        <li><a href="./detail-nanami.html">Nanami Kento</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Maldiciones</a></h2>
-      <ul>
-        <li><a href="#">Toji Fushiguro</a></li>
-        <li><a href="#">Sukuna Ryomen</a></li>
-        <li><a href="#">Mahito</a></li>
-      </ul>
-    </section>
-    <section>
-      <h2>Lugares</a></h2>
-      <ul>
-        <li><a href="#">Escuela Jujutsu de Tokyo</a></li>
-        <li><a href="#">Ciudad de Tokyo</a></li>
-        <li><a href="./detail-shibuya.html">Ciudad de Shibuya</a></li>
-      </ul>
-    </section>
-  </main>
-  <include src="./src/footer.html"></include>
-    </div>
+
+<body class="category-page">
+  <div class="loading-screen">
+    <div class="loading-message">Cargando...</div>
+  </div>
+  <div class="main_container">
+    <include src="./src/header.html"></include>
+    <main>
+      <section>
+        <h2 class="category-title" class="Sorcerers">Hechiceros</h2>
+        <ul class="characterList">
+          <li class="characters yuji"><a href="./detail-yuji.html">Yuji Itadori</a></li>
+          <li class="characters goyo"><a href="./detail-gojo.html">Satoru Gojo</a></li>
+          <li class="characters nanami"><a href="./detail-nanami.html">Nanami Kento</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="category-title" class="Curses">Maldiciones</a></h2>
+        <ul class="characterList">
+          <li><a href="./detail-toji.html">Toji Fushiguro</a></li>
+          <li><a href="#">Sukuna Ryomen</a></li>
+          <li><a href="#">Mahito</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="category-title" class="sites">Lugares</a></h2>
+        <ul class="placesList">
+          <li><a href="#">Escuela Jujutsu de Tokyo</a></li>
+          <li><a href="#">Ciudad de Tokyo</a></li>
+          <li><a href="./detail-shibuya.html">Ciudad de Shibuya</a></li>
+        </ul>
+      </section>
+    </main>
+    <include src="./src/footer.html"></include>
+  </div>
 </body>
+
 </html>
