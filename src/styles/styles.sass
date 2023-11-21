@@ -17,6 +17,9 @@ body
   padding: 0
   min-height: 100vh
   max-width: 2000px
+  background-image: url('/assets/img/2560x1440-396613-wallpaper-jujutsu-kaisen-yuji-megumi-nobara-satoru.jpg')
+  background-repeat: no-repeat
+  background-size: cover
   color: $c_txt_main
   background-color: $c_txt_secondary
   transition: opacity 1s ease-in-out
@@ -33,6 +36,10 @@ body
 
 a
   text-decoration: none
+  color: $c_txt_main
+  &:hover
+    color: $c_txt_highlight
+    transition: color 0.3s ease-in-out
 
 ul
   list-style: none
@@ -68,8 +75,8 @@ ul
 .spinner
   width: 40px
   height: 40px
-  border: 4px solid #f3f3f3
-  border-top: 4px solid #3498db
+  border: 4px solid $c_txt_main
+  border-top: 4px solid $c_txt_highlight
   border-radius: 50%
   animation: spin 2s linear infinite
 
@@ -308,13 +315,17 @@ p
 
 .yuji-img,
 .toji-img,
-.geto-img
+.geto-img,
+.goyo-img,
+.nanami-img
   max-width: 300px
   height: auto
 
 .yuji,
 .toji,
-.geto
+.geto,
+.goyo,
+.nanami
   grid-column: 1 / 3
   display: flex
   justify-content: center
@@ -322,7 +333,9 @@ p
 
 .yuji-photo,
 .toji-photo,
-.geto-photo
+.geto-photo,
+.goyo-photo,
+.nanami-photo
   grid-column: 3 / -1
   margin: 1rem 7rem
   display: flex
@@ -331,7 +344,9 @@ p
 
 .yuji .chars,
 .toji .chars,
-.geto .chars
+.geto .chars,
+.goyo .chars,
+.nanami .chars
   text-orientation: upright
   border-right: none
   margin: 0
@@ -352,3 +367,137 @@ p
   left: 0
   width: 100%
   height: 100%
+
+.placesList
+  list-style: none
+  padding: 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 2rem
+
+.placesList .places
+  flex: 1 1 calc(50% - 20px)
+  margin-bottom: 10px
+  box-shadow: 0 0 10px 0 $c_txt_main
+
+.placesList .places a
+  display: block
+  padding: 10px
+  color: inherit
+  text-decoration: none
+
+article
+  margin-bottom: 20px
+  #top
+    button
+      display: inline-block
+      margin: 20px 0
+      padding: 10px 20px
+      background-color: $c_txt_highlight
+      // color: $c_txt_secondary
+      text-decoration: none
+      border-radius: 5px
+      &:hover
+        background-color: $c_txt_main
+
+.detail-content
+  max-width: 960px
+  margin: 0 auto
+  padding: 20px
+  border-radius: 5px
+  background-color: $c_txt_secondary
+  box-shadow: 0 0 10px 0 $c_txt_main
+
+.detail.content h1, detail.content h2
+  text-align: center
+  margin-bottom: 20px
+
+.detail.content p
+  margin-bottom: 20px
+
+.button,
+.button:after
+  width: 150px
+  height: 76px
+  // line-height: 78px
+  // font-size: 20px
+  // font-family: 'Bebas Neue', sans-serif
+  background: linear-gradient(45deg, transparent 5%, $c_bg_header 5%)
+  border: 0
+  color: $c_txt_main
+  letter-spacing: 3px
+  box-shadow: 6px 0px 0px $c_txt_highlight
+  outline: transparent
+  position: relative
+  -webkit-user-select: none
+  user-select: none
+  touch-action: manipulation
+
+.button:after
+  --slice-0: inset(50% 50% 50% 50%)
+  --slice-1: inset(80% -6px 0 0)
+  --slice-2: inset(50% -6px 30% 0)
+  --slice-3: inset(10% -6px 85% 0)
+  --slice-4: inset(40% -6px 43% 0)
+  --slice-5: inset(80% -6px 5% 0)
+
+  content: 'TOP'
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: linear-gradient(45deg, transparent 3%, $c_bg_header 3%, $c_bg_header 5%, $c_txt_main 5%)
+  text-shadow: -3px -3px 0px $c_txt_highlight, 3px 3px 0px $c_bg_header
+  clip-path: var(--slice-0)
+
+.button:hover:after
+  animation: 1s glitch
+  animation-timing-function: steps(4, end)
+
+@keyframes glitch
+  0%
+    clip-path: var(--slice-1)
+    transform: translate(-20px, -10px)
+
+  10%
+    clip-path: var(--slice-3)
+    transform: translate(10px, 10px)
+
+  20%
+    clip-path: var(--slice-1)
+    transform: translate(-10px, 10px)
+
+  30%
+    clip-path: var(--slice-3)
+    transform: translate(0px, 5px)
+
+  40%
+    clip-path: var(--slice-2)
+    transform: translate(-5px, 0px)
+
+  50%
+    clip-path: var(--slice-3)
+    transform: translate(5px, 0px)
+
+  60%
+    clip-path: var(--slice-4)
+    transform: translate(5px, 10px)
+
+  70%
+    clip-path: var(--slice-2)
+    transform: translate(-10px, 10px)
+
+  80%
+    clip-path: var(--slice-5)
+    transform: translate(20px, -10px)
+
+  90%
+    clip-path: var(--slice-1)
+    transform: translate(-10px, 0px)
+
+  100%
+    clip-path: var(--slice-1)
+    transform: translate(0)

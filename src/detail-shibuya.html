@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Jujutsu Kaisen Anime</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./styles/styles.sass"/>
-    <script type="module" src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.sass" />
+    <script type="module" src="./app.js"></script>
 </head>
-<body>
-    <div class="main_container">
-<include src="src/header.html"></include>
-    <main>
-        <section>
-            <section>
-                <h2>Ciudad de shibuya en Jujutsu Kaisen</h2>
-                <p>Sumérgete en los detalles más fascinantes de Jujutsu Kaisen, con información exclusiva y elementos multimedia.</p>
-            </section>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Jujutsu Kaisen Anime</p>
-    </footer>
+
+<body class="detail-page shibuya">
+    <div class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-message">Cargando...</div>
+    </div>
+    <div class="main_container" id="top">
+        <include src="./src/header.html"></include>
+        <main class="detail-content">
+            <article>
+
+                <h1>Shibuya, epicentro del Halloween japonés</h1>
+
+                <p>Shibuya es uno de los barrios más emblemáticos de Tokio, Japón. Se caracteriza por su vibrante vida
+                    nocturna, sus grandes almacenes y su célebre cruce peatonal. Además, es el escenario de una de las
+                    festividades de Halloween más multitudinarias del mundo.</p>
+
+                <p>Cada año, multitudes de personas de todo el mundo se dan cita en Shibuya para celebrar esta
+                    festividad. El barrio se llena de disfraces de todo tipo, desde personajes de anime y manga hasta
+                    superhéroes y villanos. Las calles se convierten en una fiesta continua, con música, baile y
+                    diversión.</p>
+
+                <h2>La vinculación de Shibuya con la serie Jujutsu Kaisen</h2>
+
+                <p>La serie de anime y manga Jujutsu Kaisen está ambientada en Tokio, y Shibuya es un lugar importante
+                    en la historia. El barrio es el escenario de algunas de las batallas más épicas de la serie, y los
+                    personajes principales, Yuji Itadori y sus amigos, suelen visitarlo.</p>
+
+                <p>En el siguiente vídeo, podemos ver el trailer de la segunda temporada del anime donde aparece Shibuya:</p>
+                <div class="iframe-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9OhV3IWUsxE?si=2XRohmjWYUoJEfZi"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+                <h2>La reciente cancelación del Halloween de 2023</h2>
+
+                <p>En 2023, el Halloween de Shibuya se canceló por primera vez en su historia. La decisión se tomó tras
+                    los altercados que se produjeron el año anterior. En 2022, la policía tuvo que intervenir para
+                    dispersar a las multitudes descontroladas, que provocaron daños en el mobiliario urbano y en los
+                    negocios locales.</p>
+
+                <p>La cancelación del Halloween de 2023 fue una noticia decepcionante para muchos fans de la serie
+                    Jujutsu Kaisen. Sin embargo, las autoridades de Shibuya esperan poder retomar la celebración en
+                    2024, con medidas de seguridad reforzadas para evitar que se repitan los incidentes del año
+                    anterior.</p>
+
+                <h2>La importancia de la seguridad</h2>
+
+                <p>El Halloween de Shibuya es una celebración festiva y divertida, pero es importante que se celebre con
+                    seguridad. Las autoridades locales están trabajando para garantizar que la fiesta se desarrolle de
+                    forma pacífica y ordenada, y que todos los participantes puedan disfrutar de ella sin riesgos.</p>
+                    <button class="button" role="button"><a href="#top">Volver al principio</a></button>
+            </article>
+        </main>
+        <include src="./src/footer.html"></include>
     </div>
 </body>
-</html>
