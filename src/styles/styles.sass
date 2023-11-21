@@ -501,3 +501,33 @@ article
   100%
     clip-path: var(--slice-1)
     transform: translate(0)
+
+
+.related-articles,
+.related-categories
+  margin-top: 40px
+  h2
+    font-size: 24px
+    margin-bottom: 20px
+  ul
+    list-style-type: none
+    padding: 0
+    li
+      margin-bottom: 10px
+      a
+        color: $c_txt_main
+        &:hover
+          color: $c_txt_highlight
+
+.related
+  display: flex
+  flex-direction: column
+  align-items: start
+  @media (min-width: 768px)
+    flex-direction: row
+    justify-content: space-between
+
+.related-articles, .related-categories
+  width: 100%
+  @media (min-width: 768px)
+    width: 45%
