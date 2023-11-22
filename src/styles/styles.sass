@@ -236,7 +236,12 @@ h2
   padding-top: 1.2rem
   text-transform: uppercase
   font-size: 1.2em
-
+h3
+  color: $c_txt_main
+  font-family: $ftext
+  padding-top: 1rem
+  text-transform: uppercase
+  font-size: 1em
 p
   padding: .25rem 0
 
@@ -395,13 +400,12 @@ article
       margin: 20px 0
       padding: 10px 20px
       background-color: $c_txt_highlight
-      // color: $c_txt_secondary
       text-decoration: none
       border-radius: 5px
       &:hover
         background-color: $c_txt_main
 
-.detail-content
+.detail-content, .content
   max-width: 960px
   margin: 0 auto
   padding: 20px
@@ -409,20 +413,17 @@ article
   background-color: $c_txt_secondary
   box-shadow: 0 0 10px 0 $c_txt_main
 
-.detail.content h1, detail.content h2
+.detail.content h1, detail.content h2, detail.content h3,.content h1, .content h2
   text-align: center
   margin-bottom: 20px
 
-.detail.content p
+.detail.content p, .content p
   margin-bottom: 20px
 
 .button,
 .button:after
   width: 150px
   height: 76px
-  // line-height: 78px
-  // font-size: 20px
-  // font-family: 'Bebas Neue', sans-serif
   background: linear-gradient(45deg, transparent 5%, $c_bg_header 5%)
   border: 0
   color: $c_txt_main
