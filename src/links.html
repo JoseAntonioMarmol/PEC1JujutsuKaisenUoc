@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Jujutsu Kaisen Anime</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./styles/styles.sass"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.sass" />
     <script type="module" src="app.js"></script>
 </head>
-<body>
+
+<body class="links-page">
+    <div class="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-message">Cargando...</div>
+    </div>
     <div class="main_container">
-<include src="src/header.html"></include>
-    <main>
-        <section>
-            <h2>Enlaces y Documentación</h2>
-            <p>Consulta las fuentes y atribuciones utilizadas en la creación de este portal sobre Jujutsu Kaisen.</p>
-            <ul>
-                <li><a href="#">Fuente 1: Descripción de la serie</a></li>
-                <li><a href="#">Fuente 2: Entrevista a los creadores</a></li>
-                <li><a href="#">Fuente 3: Recursos gráficos</a></li>
-            </ul>
-        </section>
-    <footer>
-        <p>&copy; 2023 Jujutsu Kaisen Anime</p>
-    </footer>
+        <include src="./src/header.html"></include>
+        <main class="links-content content">
+            <section>
+                <h1>Enlaces y Documentación</h1>
+                <p>Consulta las fuentes y atribuciones utilizadas en la creación de este portal sobre Jujutsu Kaisen.
+                </p>
+                <h2>Documentacion</h2>
+                <ul>
+                    <li><a href="https://sass-lang.com/documentation/" target="_blank" rel="noopener">SASS
+                            Documentation</a>. (s. f.). Sass-lang.com.
+                        Recuperado 22 de noviembre de 2023.</li>
+                    <li><a href="https://parceljs.org/docs/"target="_blank" rel="noopener">Parcel documentation</a>. (s. f.). Parceljs.org. Recuperado
+                        22 de noviembre de 2023.</li>
+                </ul>
+                <h2>Imagenes</h2>
+                <ul>
+                    <li><a href="https://images.google.com/"target="_blank" rel="noopener">Google images</a>. (s. f.). Google.com. Recuperado 22 de
+                        noviembre de 2023.</li>
+                    <li><a href="https://unsplash.com/es"target="_blank" rel="noopener">Unsplash</a>. (s. f.). Hermosas imágenes y fotos gratuitas.
+                        Unsplash.com. Recuperado 22 de noviembre de 2023.</li>
+                </ul>
+                <h2>Video</h2>
+                <ul>
+                    <li>Films, G. [@giganofilms]. (2023, julio 5). <a
+                            href="https://www.youtube.com/watch?v=jzLfH8qfYV4"target="_blank" rel="noopener">Torero x Jujutsu Kaisen OP 2</a>.
+                        Youtube.</li>
+                </ul>
+                <h2>informacion de la serie</h2>
+                <ul>
+                    <li><a href="https://jujutsukaisen.jp/"target="_blank" rel="noopener">TVアニメ「呪術廻戦」公式サイト</a>. (s. f.). TVアニメ「呪術廻戦」公式サイト. Recuperado
+                        22 de noviembre de 2023.</li>
+                    <li>Wikipedia contributors. (2023, noviembre 20). <a
+                            href="https://en.wikipedia.org/w/index.php?title=Jujutsu_Kaisen&oldid=1186010339"target="_blank" rel="noopener">Jujutsu
+                            Kaisen</a>. Wikipedia, The Free Encyclopedia.</li>
+                    <li>(S. f.). <a
+                            href="https://www.crunchyroll.com/es-es/series/GRDV0019R/jujutsu-kaisen"target="_blank" rel="noopener">Crunchyroll</a>.
+                        Recuperado 22 de noviembre de 2023.</li>
+                </ul>
+                <h2>Otros enlaces</h2>
+                <ul>
+                    <li><a href="http://google.com"target="_blank" rel="noopener">Google</a>. (s. f.). Google.com. Recuperado 22 de noviembre de 2023.
+                    </li>
+                    <li><a href="http://youtube.com"target="_blank" rel="noopener">YouTube</a>. (s. f.). Youtube. Recuperado 22 de noviembre de 2023.
+                    </li>
+                </ul>
+
+
+            </section>
+            <include src="./src/footer.html"></include>
     </div>
 </body>
+
 </html>
