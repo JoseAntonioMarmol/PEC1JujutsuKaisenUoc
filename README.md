@@ -6,12 +6,12 @@ This project is a tiny site to show the information about the anime Jujutsu Kais
 
 ## Technologies used
 
-[Parcel](https://parceljs.org/) is used to bundle the project.
-[saas](https://sass-lang.com/) is used to preprocess the css.
-[VSCode](https://code.visualstudio.com/) is used as IDE.
-[PostHtml](https://posthtml.org/) is used to transform the html.
-[prettier](https://prettier.io/) is used to format the code.
-[linter](https://eslint.org/) is used to lint the code.
+- [Parcel](https://parceljs.org/) is used to bundle the project.
+- [Saas](https://sass-lang.com/) is used to preprocess the css.
+- [VSCode](https://code.visualstudio.com/) is used as IDE.
+- [PostHtml](https://posthtml.org/) is used to transform the html.
+- [prettier](https://prettier.io/) is used to format the code.
+- [linter](https://eslint.org/) is used to lint the code.
 
 ## Git
 
