@@ -11,7 +11,9 @@
     "build": "npm-run-all clean parcel:build",
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",
-    "clean": "rimraf dist .parcel-cache"
+    "clean": "rimraf dist .parcel-cache",
+    "lint": "eslint src --ext .js --quiet",
+    "format": "prettier --write src/**/*.{js,css,sass,html,json,md}"
   },
   "keywords": [],
   "author": "Jose Antonio Marmol <joseantoniomarmol@gmail.com>",
@@ -19,11 +21,18 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.1",
     "autoprefixer": "^10.4.16",
+    "eslint-config-airbnb-standard": "^3.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "npm-run-all": "^4.1.5",
     "parcel": "latest",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0"
   }
 }

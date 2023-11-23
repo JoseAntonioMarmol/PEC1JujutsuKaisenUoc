@@ -1,138 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jujutsu Kaisen Anime</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.sass" />
+    <script type="module" src="./app.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Jujutsu Kaisen Anime</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/styles.sass" />
-  <script type="module" src="./app.js"></script>
-</head>
-
-<body class="category-page">
-  <div class="loading-screen">
-    <div class="spinner"></div>
-    <div class="loading-message">Cargando...</div>
-  </div>
-  <div class="main_container">
-    <include src="./src/header.html"></include>
-    <main class="category-content">
-      <section class="section-top">
-        <h2 class="category-title" class="sorcerers" id="sorcerers">Hechiceros</h2>
-        <ul class="characterList">
-          <li class="characters yuji">
-            <a href="./detail-yuji.html">
-              <p class="chars">Yuji Itadori</p>
-              <picture class="yuji-photo">
-                <source srcset="../assets/img/Yuji.jpeg" type="image/jpeg" media="(max-width:768px)">
-                <img src="../assets/img/Yuji.jpeg" class="yuji-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="yuji portrait">
-              </picture>
-            </a>
-          </li>
-          <li class="characters goyo">
-            <a href="./detail-goyo.html">
-              <p class="chars">Satoru Gojo</p>
-              <picture class="goyo-photo">
-                <source srcset="../assets/img/goyo.webp" type="image/webp" media="(max-width:768px)">
-                <img src="../assets/img/goyo.webp" class="goyo-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="goyo portrait">
-              </picture>
-            </a>
-          </li>
-          <li class="characters nanami">
-            <a href="./detail-nanami.html">
-              <p class="chars">Nanami Kento</p>
-              <picture class="nanami-photo">
-                <source srcset="../assets/img/nanami.jpg" type="image/jpg" media="(max-width:768px)">
-                <img src="../assets/img/nanami.jpg" class="nanami-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="nanami portrait">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="section-middle">
-        <h2 class="category-title" class="curses" id="curses">Maldiciones</a></h2>
-        <ul class="characterList">
-          <li class="characters toji">
-            <a href="./detail-toji.html">
-              <p class="chars">Toji Fushiguro</p>
-              <picture class="toji-photo">
-                <source srcset="../assets/img/toji-fushiguro-jujutsu-kaisen.webp" type="image/webp"
-                  media="(max-width:768px)">
-                <img src="../assets/img/toji-fushiguro-jujutsu-kaisen.webp" class="toji-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="toji portrait">
-              </picture>
-            </a>
-          </li>
-          <li class="characters geto">
-            <a href="./detail-geto.html">
-              <p class="chars">Suguru Geto</p>
-              <picture class="geto-photo">
-                <source srcset="../assets/img/geto.webp" type="image/webp" media="(max-width:768px)">
-                <img src="../assets/img/geto.webp" class="geto-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="geto portrait">
-              </picture>
-            </a>
-          </li>
-          <li class="characters geto">
-            <a href="#">
-              <p class="chars">Mahito</p>
-              <picture class="mahito-photo">
-                <source srcset="#" type="image/webp" media="(max-width:768px)">
-                <img src="#" class="mahito-img" sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
-                  width="100%" loading="lazy" alt="mahito portrait">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="section-bottom">
-        <h2 class="category-title" class="locations" id="locations">Lugares</a></h2>
-        <ul class="placesList">
-          <li class="places jujutsuSchool">
-            <a href="#">
-              <p class="loc">Escuela de hechiceria de Tokyo</p>
-              <picture class="jujutsuSchool-photo">
-                <source srcset="#" type="image/jpg" media="(max-width:768px)">
-                <img src="#" class="jujutsuSchool-img" sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
-                  width="100%" loading="lazy" alt="jujutsu school">
-              </picture>
-            </a>
-          </li>
-          <li class="places tokio">
-            <a href="#">
-              <p class="loc">Ciudad de Tokyo</p>
-              <picture class="tokio-photo">
-                <source srcset="#" type="image/jpg" media="(max-width:768px)">
-                <img src="#" class="tokio-img" sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
-                  width="100%" loading="lazy" alt="tokio">
-              </picture>
-            </a>
-          </li>
-          <li class="places shibuya">
-            <a href="./detail-shibuya.html">
-              <p class="loc">Ciudad de Shibuya</p>
-              <picture class="shibuya-photo">
-                <source srcset="../assets/img/daryan-shamkhali-FwnImRn57VA-unsplash.jpg" type="image/webp"
-                  media="(max-width:768px)">
-                <img src="../assets/img/daryan-shamkhali-FwnImRn57VA-unsplash.jpg" class="shibuya-img"
-                  sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px" width="100%" loading="lazy"
-                  alt="shibuya">
-              </picture>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-    <include src="./src/footer.html"></include>
-  </div>
-</body>
-
+  <body class="category-page">
+    <div class="loading-screen">
+      <div class="spinner"></div>
+      <div class="loading-message">Cargando...</div>
+    </div>
+    <div class="main_container">
+      <include src="./src/header.html"></include>
+      <main class="category-content">
+        <section class="section-top">
+          <h2 class="category-title" class="sorcerers" id="sorcerers">
+            Hechiceros
+          </h2>
+          <ul class="characterList">
+            <li class="characters yuji">
+              <a href="./detail-yuji.html">
+                <p class="chars">Yuji Itadori</p>
+                <picture class="yuji-photo">
+                  <source
+                    srcset="../assets/img/Yuji.jpeg"
+                    type="image/jpeg"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/Yuji.jpeg"
+                    class="yuji-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="yuji portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="characters goyo">
+              <a href="./detail-goyo.html">
+                <p class="chars">Satoru Gojo</p>
+                <picture class="goyo-photo">
+                  <source
+                    srcset="../assets/img/goyo.webp"
+                    type="image/webp"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/goyo.webp"
+                    class="goyo-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="goyo portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="characters nanami">
+              <a href="./detail-nanami.html">
+                <p class="chars">Nanami Kento</p>
+                <picture class="nanami-photo">
+                  <source
+                    srcset="../assets/img/nanami.jpg"
+                    type="image/jpg"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/nanami.jpg"
+                    class="nanami-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="nanami portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="section-middle">
+          <h2 class="category-title" class="curses" id="curses">Maldiciones</h2>
+          <ul class="characterList">
+            <li class="characters toji">
+              <a href="./detail-toji.html">
+                <p class="chars">Toji Fushiguro</p>
+                <picture class="toji-photo">
+                  <source
+                    srcset="../assets/img/toji-fushiguro-jujutsu-kaisen.webp"
+                    type="image/webp"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/toji-fushiguro-jujutsu-kaisen.webp"
+                    class="toji-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="toji portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="characters geto">
+              <a href="./detail-geto.html">
+                <p class="chars">Suguru Geto</p>
+                <picture class="geto-photo">
+                  <source
+                    srcset="../assets/img/geto.webp"
+                    type="image/webp"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/geto.webp"
+                    class="geto-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="geto portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="characters geto">
+              <a href="#">
+                <p class="chars">Mahito</p>
+                <picture class="mahito-photo">
+                  <source
+                    srcset="#"
+                    type="image/webp"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="#"
+                    class="mahito-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="mahito portrait"
+                  />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="section-bottom">
+          <h2 class="category-title" class="locations" id="locations">
+            Lugares
+          </h2>
+          <ul class="placesList">
+            <li class="places jujutsuSchool">
+              <a href="#">
+                <p class="loc">Escuela de hechiceria de Tokyo</p>
+                <picture class="jujutsuSchool-photo">
+                  <source
+                    srcset="#"
+                    type="image/jpg"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="#"
+                    class="jujutsuSchool-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="jujutsu school"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="places tokio">
+              <a href="#">
+                <p class="loc">Ciudad de Tokyo</p>
+                <picture class="tokio-photo">
+                  <source
+                    srcset="#"
+                    type="image/jpg"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="#"
+                    class="tokio-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="tokio"
+                  />
+                </picture>
+              </a>
+            </li>
+            <li class="places shibuya">
+              <a href="./detail-shibuya.html">
+                <p class="loc">Ciudad de Shibuya</p>
+                <picture class="shibuya-photo">
+                  <source
+                    srcset="
+                      ../assets/img/daryan-shamkhali-FwnImRn57VA-unsplash.jpg
+                    "
+                    type="image/webp"
+                    media="(max-width:768px)"
+                  />
+                  <img
+                    src="../assets/img/daryan-shamkhali-FwnImRn57VA-unsplash.jpg"
+                    class="shibuya-img"
+                    sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
+                    width="100%"
+                    loading="lazy"
+                    alt="shibuya"
+                  />
+                </picture>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <include src="./src/footer.html"></include>
+    </div>
+  </body>
 </html>
