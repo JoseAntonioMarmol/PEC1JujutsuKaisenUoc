@@ -19,7 +19,9 @@
   "author": "Jose Antonio Marmol <joseantoniomarmol@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.1",
     "@parcel/transformer-sass": "^2.10.1",
+    "@parcel/transformer-webmanifest": "^2.10.1",
     "autoprefixer": "^10.4.16",
     "eslint-config-airbnb-standard": "^3.1.0",
     "eslint-config-prettier": "^9.0.0",

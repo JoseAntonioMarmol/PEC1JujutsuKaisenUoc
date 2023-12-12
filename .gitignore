@@ -8,3 +8,4 @@ package-lock.json
 dist
 .parcel-cache
 
+assets/favicon/favicon_io.zip
