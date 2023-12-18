@@ -9,7 +9,8 @@
   padding: 0
   box-sizing: border-box
   font-family: $ftext
-
+html, body
+  scroll-behavior: smooth
 body
   display: flex
   flex-direction: column
@@ -115,6 +116,7 @@ header
   top: 0
   left: 0
   width: 100vw
+  z-index: 1
 
   .logo-cliped
     display: inline-block
@@ -306,6 +308,23 @@ p
 .index-img
   max-width: 560px
   height: auto
+  -webkit-clip-path: polygon(51% 24%, 73% 2%, 98% 20%, 98% 53%, 50% 100%, 3% 54%, 2% 24%, 28% 3%)
+  clip-path: polygon(51% 24%, 73% 2%, 98% 20%, 98% 53%, 50% 100%, 3% 54%, 2% 24%, 28% 3%)
+  animation: heartbeat 1.5s infinite
+
+@keyframes heartbeat
+  0%
+    transform: scale(1)
+  25%
+    transform: scale(1.1)
+  50%
+    transform: scale(1)
+  75%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+
 .chars
   margin: 0
   display: inline-block
@@ -362,7 +381,7 @@ p
   justify-content: center
   align-items: center
   position: relative
-  z-index: 1
+  // z-index: 999
   overflow: hidden
   padding-top: 56.25%
 
@@ -413,12 +432,17 @@ article
   background-color: $c_txt_secondary
   box-shadow: 0 0 10px 0 $c_txt_main
 
-.detail.content h1, detail.content h2, detail.content h3,.content h1, .content h2
+.detail-content h1, .detail-content h2, .detail-content h3,.content h1, .content h2
   text-align: center
   margin-bottom: 20px
 
-.detail.content p, .content p
+.detail-content p, .content p
   margin-bottom: 20px
+
+.content img
+  width: 100%
+  height: auto
+  object-fit: cover
 
 .button,
 .button:after
@@ -551,10 +575,9 @@ article
       color: $c_txt_highlight
 .footer-nav
   display: flex
-  flex-direction: column
   justify-content: space-around
-  // flex-direction: column
-  // align-items: center
+  flex-direction: column
+  align-items: center
   gap: 5px
   @media (min-width: 768px)
     flex-direction: row
@@ -569,6 +592,9 @@ article
       order: 2
     .logo-clipped
       order: 1
+@media (max-with: 768px)
+  .footer-nav .logo-clipped, .footer-nav .nav, .footer-nav .footer-info
+    width: 100%
 // .footer-nav .logo-clipped
 //   order: 1
 // .footer-nav .nav
@@ -577,11 +603,25 @@ article
 //   order: 3
 .footer-nav .nav
   display: flex
-  flex-direction: column
+  flex-wrap: wrap
+  justify-content: space-around
+  flex-direction: row
   align-items: center
   gap: 5px
-  @media (min-width: 768px)
-    flex-direction: row
+  @media (max-width: 768px)
+    flex-direction: column
+
+.footer-nav ul
+  list-style: none
+  padding: 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  flex-direction: row
+  align-items: center
+  gap: 5px
+  @media (max-width: 768px)
+    flex-direction: column
 
 .logo-container
   display: flex
@@ -608,10 +648,10 @@ article
   object-fit: cover
   transition: all 0.3s ease-in-out
 
-.logo-img-j:hover
-  transform: scale(1.2)
-.logo-img-k:hover
-  transform: scale(1.2)
+// .logo-img-j:hover
+//   transform: scale(1.2)
+// .logo-img-k:hover
+//   transform: scale(1.2)
 
 .logo-link
   display: flex
@@ -621,6 +661,115 @@ article
 
 .logo-img-j
   clip-path: polygon(5% 5%, 94% 5%, 93% 23%, 62% 24%, 58% 80%, 39% 98%, 7% 92%, 17% 83%, 36% 87%, 44% 78%, 45% 26%, 5% 25%)
+  display: inline-block
+  transition: transform 0.3s ease-in-out
+  &:hover
+    transform: scale(1.2)
+    animation: barrel-roll-clockwise 1s linear infinite
 
 .logo-img-k
   clip-path: polygon(10% 0, 35% 0, 34% 36%, 71% 0, 100% 0, 59% 48%, 100% 100%, 66% 100%, 33% 53%, 33% 100%, 9% 100%)
+  display: inline-block
+  transition: transform 0.3s ease-in-out
+  &:hover
+    transform: scale(1.2)
+    animation: barrel-roll-counter-clockwise 1s linear infinite
+
+@keyframes barrel-roll-clockwise
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+@keyframes barrel-roll-counter-clockwise
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(-360deg)
+
+.jujutsukaisencito
+  display: flex
+  justify-content: center
+  align-items: center
+  svg
+    width: auto
+    height: 100%
+
+  circle.eye-left,
+  circle.eye-right
+    animation: blink 2s infinite
+    transform-origin: center
+
+
+  circle.eye-left
+    animation-delay: 0.2s
+
+  circle.eye-right
+    animation-delay: 1s
+
+  ellipse.mouth
+      animation: mouth 1s infinite
+
+  line.eyebrow-left,
+  line.eyebrow-right
+    animation: eyebrows 1.5s infinite
+
+  line.eyebrow-left
+    animation-delay: 0.4s
+
+  line.eyebrow-right
+    animation-delay: 0.9s
+
+@keyframes blink
+  0%, 100%
+    r: 6
+
+  50%
+    r: 0
+
+@keyframes mouth
+  0%, 100%
+    rx: 20
+    ry: 10
+
+  50%
+    rx: 10
+    ry: 10
+
+@keyframes eyebrows
+  0%, 100%
+    stroke: #000
+
+  25%
+    stroke-width: 4
+
+  50%
+    stroke-width: 6
+    stroke: #FFD700
+
+  75%
+    stroke-width: 4
+
+// .container
+//   display: flex
+//   justify-content: space-between
+//   align-items: start
+
+//   p
+//     flex: 1
+//     margin-right: 20px
+
+
+//   .img-detail-right
+//     flex: 1
+//     img
+//       width: 100%
+//       height: auto
+//       object-fit: cover
+//       padding-left: 1%
+//     // float: right
+//     // width: 50%
+//     // height: auto
+//     // padding-left: 1%
+//     // object-fit: cover
+
