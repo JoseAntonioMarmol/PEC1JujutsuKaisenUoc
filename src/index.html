@@ -50,7 +50,6 @@
                 height="315"
                 src="https://www.youtube-nocookie.com/embed/a70_eOnIS3o?si=-qZwyHmK3k82qpvQ"
                 title="YouTube video player"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
                 id="ytIframe"
@@ -68,18 +67,31 @@
           </p>
           <picture class="index-photo">
             <source
-              srcset="../assets/img/F3vlwWqXAAACSd9.jpeg"
-              type="image/jpeg"
-              media="(max-width:768px)"
-            />
-            <img
-              src="../assets/img/F3vlwWqXAAACSd9.jpeg"
-              class="index-img"
-              sizes="(min-width: 1200px) 61px, (min-width: 960px) 41px, 53px"
-              width="100%"
-              loading="lazy"
-              alt="jujutsu kaisen crew"
-            />
+            srcset="
+              ../assets/img/F3vlwWqXAAACSd91200w.webp
+            "
+            type="image/webp"
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="
+              ../assets/img/F3vlwWqXAAACSd9768w.webp
+            "
+            type="image/webp"
+            media="(min-width: 768px) and (max-width: 1023px)"
+          />
+          <source
+            srcset="
+              ../assets/img/F3vlwWqXAAACSd9480w.webp
+            "
+            type="image/webp"
+            media="(max-width:767px)"
+          />
+          <img
+            class="index-img"
+            src="../assets/img/F3vlwWqXAAACSd91200w.webp"
+            alt="jujutsu kaisen crew and sukuna"
+          />
           </picture>
         </section>
         <section class="section-bottom">
