@@ -17,7 +17,7 @@ body
   margin: 0 auto
   padding: 0
   min-height: 100vh
-  max-width: 2000px
+  max-width: 1200px
   background-image: url('/assets/img/2560x1440-396613-wallpaper-jujutsu-kaisen-yuji-megumi-nobara-satoru.jpg')
   background-repeat: no-repeat
   background-size: cover
@@ -81,7 +81,6 @@ ul
   border-radius: 50%
   animation: spin 2s linear infinite
 
-
 @keyframes spin
   0%
     transform: rotate(0deg)
@@ -95,6 +94,23 @@ ul
   opacity: 0
   visibility: hidden
   transition: opacity 1s ease-in-out
+  background-color: $c_txt_secondary
+  @include fallback
+    width: 100%
+    font-size: $fsize_standard
+  @include wearables
+    width: 100%
+    font-size: $fsize_extrasmall
+  @include phones
+    width: 100%
+    font-size: $fsize_small
+  @include tablets
+    width: 100%
+    font-size: $fsize_small
+  @include hugeDevices
+    width: 100%
+    font-size: $fsize_big
+
 @media (max-width: 768px)
   .main_container
     width: 100%
@@ -108,115 +124,252 @@ footer
   border: 1px $c_txt_main dotted
   flex-shrink: 0
 
-header
-  width: calc(100vw - 20px)
+.header
   background-color: $c_bg_header
   box-shadow: 1px 1px 5px 0px $c_txt_highlight
   position: sticky
   top: 0
-  left: 0
-  width: 100vw
-  z-index: 1
-
-  .logo-cliped
-    display: inline-block
-    margin-left: 10px
-
-    // img
-    //   width: 100%
-    //   max-width: 150px
-    //   height: auto
-
-  .nav
+  width: 100%
+  z-index: 100
+.header .logo-cliped
+  display: block
+  margin-left: 10px
+  float: left
+  img
     width: 100%
-    height: 100%
-    position: fixed
+
+.header ul
+  margin: 0
+  padding: 0
+  // list-style: none
+  overflow: hidden
+  justify-content: space-around
+.header li a
+  display: block
+  padding: 10px
+  text-decoration: none
+  color: $c_txt_main
+.header li a:hover,
+.header .hamb:hover
+  color: $c_txt_highlight
+  outline: none
+
+  /*Menu*/
+.header .menu
+  // clear:both
+  max-height: 0
+  transition: max-height .5s ease-out
+/*Hamburger menu*/
+
+.header .hamb
+  cursor: pointer
+  display: inline-block
+  float: right
+  padding: 20px 20px
+  position: relative
+  -webkit-user-select: none
+  user-select: none
+  touch-action: smooth
+
+.header .hamb .hamb-line
+  background: $c_txt_main
+  display: block
+  height: 2px
+  position: relative
+  transition: background .2s ease-out
+  width: 24px
+
+.header .hamb .hamb-line::before,
+.header .hamb .hamb-line::after
+  background: $c_txt_main
+  content: ''
+  display: block
+  height: 100%
+  position: absolute
+  transition: all .2s ease-out
+  width: 100%
+
+.header .hamb .hamb-line::before
+  top: 5px
+
+.header .hamb .hamb-line::after
+  top: -5px
+
+/* side menu*/
+
+.header .side-menu
+  display: none
+
+.header .side-menu:checked ~ .menu
+  max-height: 100%
+
+.header .side-menu:checked ~ .hamb .hamb-line
+  background: transparent
+
+.header .side-menu:checked ~ .hamb .hamb-line::before
+  transform: rotate(-45deg)
+
+.header .side-menu:checked ~ .hamb .hamb-line::after
+  transform: rotate(45deg)
+
+.header .side-menu:checked ~ .hamb:not(.steps) .hamb-line::before,
+.header .side-menu:checked ~ .hamb:not(.steps) .hamb-line::after
+  top: 0
+
+@media only screen and (max-width: 768px)
+  .header ul
     background-color: $c_bg_header
-    overflow: hidden
-    justify-content: space-between
+    .header li
+      padding: auto
+      border-bottom: 1px solid $c_txt_main
 
-  .menu a
-    display: block
-    padding: 10px
-    text-decoration: none
-    color: $c_txt_main
-
-  .menu a:hover
-    background-color: $c_txt_highlight
-    outline: none
-
-  .nav
-    max-height: 0
-    transition: max-height .5s ease-out
-
-  .hamb
-    cursor: pointer
-    float: right
-    padding: 20px 20px
-
-  .hamb-line
-    background: $c_txt_main
-    display: block
-    height: 2px
-    position: relative
-    width: 24px
-
-  .hamb-line::before,
-  .hamb-line::after
-    background: $c_txt_main
-    content: ''
-    display: block
+@media only screen and (min-width: 768px)
+  .menu-wrapper
+    background: $c_bg_header
     height: 100%
-    position: absolute
-    transition: all .2s ease-out
+    line-height: 55px
     width: 100%
-
-  .hamb-line::before
-    top: 5px
-
-  .hamb-line::after
-    top: -5px
-
-  .side-menu
+  .header li
+    float: left
+  .header .logo-cliped
+    line-height: 1
+    margin: 0
+    padding: 0
+    width: 150px
+  .header li a
+    padding: 0 20px
+    color: $c_txt_main
+  .header .menu
+    clear: none
+    float: right
+    max-height: none
+  .header .hamb
     display: none
-    position: absolute
-    z-index: 2
-    width: 250px
-    height: 100%
 
-  .side-menu:checked ~ nav
-    max-height: 100%
+// header
+//   // width: calc(100vw - 20px)
+//   background-color: $c_bg_header
+//   box-shadow: 1px 1px 5px 0px $c_txt_highlight
+//   position: relative
+//   // top: 0
+//   // left: 0
+//   width: 100%
+//   z-index: 3
 
-  .side-menu:checked ~ .hamb .hamb-line
-    background: transparent
+//   .logo-cliped
+//     // display: inline-block
+//     // margin-left: 10px
+//     display: block
+//     margin-left: 10px
+//     float: left
 
-  .side-menu:checked ~ .hamb .hamb-line::before
-    transform: rotate(-45deg)
-    top: 0
+//     img
+//       width: 100%
+//       // height: auto
+//       // max-width: 150px
 
-  .side-menu:checked ~ .hamb .hamb-line::after
-    transform: rotate(45deg)
-    top: 0
+//   // .nav
+//   //   width: 100%
+//   //   height: 100%
+//   //   // position: fixed
+//   //   background-color: $c_bg_header
+//   //   overflow: hidden
+//   //   justify-content: space-around
+//   .menu
+//     margin: 0
+//     padding: 0
+//     list-style: none
+//     // overflow: hidden
 
-  @media (min-width: 768px)
-    .nav
-      max-height: none
-      top: 0
-      position: relative
-      float: right
-      width: -moz-fit-content
-      width: fit-content
-      background-color: transparent
+//   .menu li a
+//     display: block
+//     padding: 10px
+//     text-decoration: none
+//     color: $c_txt_main
 
-    .menu li
-      float: left
+//   .menu li a:hover,
+//   .menu .hamb:hover
+//     background-color: $c_txt_highlight
+//     outline: none
 
-    .menu a:hover
-      background-color: transparent
-      color: $c_txt_highlight
+//   .nav
+//     max-height: 0
+//     transition: max-height .5s ease-out
 
-    .hamb
-      display: none
+//   .hamb
+//     cursor: pointer
+//     float: left
+//     padding: 20px 20px
+
+//   .hamb-line
+//     background: $c_txt_main
+//     display: block
+//     height: 2px
+//     position: relative
+//     width: 24px
+
+//   .hamb-line::before,
+//   .hamb-line::after
+//     background: $c_txt_main
+//     content: ''
+//     display: block
+//     height: 100%
+//     position: absolute
+//     transition: all .2s ease-out
+//     width: 100%
+
+//   .hamb-line::before
+//     top: 5px
+
+//   .hamb-line::after
+//     top: -5px
+
+//   .side-menu
+//     display: none
+//     position: absolute
+//     z-index: 2
+//     width: 100%
+//     height: 100%
+//     // left: 0
+//     // overflow-y: auto
+//     // touch-action: auto
+
+//     // height: 100%
+//     // overflow-y: auto
+
+//   .side-menu:checked ~ nav
+//     max-height: 100%
+
+//   .side-menu:checked ~ .hamb .hamb-line
+//     background: transparent
+
+//   .side-menu:checked ~ .hamb .hamb-line::before
+//     transform: rotate(-45deg)
+//     top: 0
+
+//   .side-menu:checked ~ .hamb .hamb-line::after
+//     transform: rotate(45deg)
+//     top: 0
+
+//   @media (min-width: 768px)
+//     .nav
+//       max-height: none
+//       top: 0
+//       position: relative
+//       float: right
+//       width: -moz-fit-content
+//       width: fit-content
+//       background-color: transparent
+
+//     .menu li
+//       float: left
+
+//     .menu a:hover
+//       background-color: transparent
+//       color: $c_txt_highlight
+
+//     .hamb
+//       display: none
 
 footer
   text-align: center
@@ -324,7 +477,6 @@ p
   100%
     transform: scale(1)
 
-
 .chars
   margin: 0
   display: inline-block
@@ -386,6 +538,7 @@ p
   padding-top: 56.25%
 
 .iframe-container iframe
+  display: block
   position: absolute
   top: 0
   left: 0
@@ -443,6 +596,11 @@ article
   width: 100%
   height: auto
   object-fit: cover
+.content .voice-actor
+  width: 25%
+  height: auto
+  object-fit: cover
+  margin: 0 auto
 
 .button,
 .button:after
@@ -527,7 +685,6 @@ article
     clip-path: var(--slice-1)
     transform: translate(0)
 
-
 .related-articles,
 .related-categories
   margin-top: 40px
@@ -593,7 +750,7 @@ article
     .logo-clipped
       order: 1
 @media (max-with: 768px)
-  .footer-nav .logo-clipped, .footer-nav .nav, .footer-nav .footer-info
+  .footer-nav .footer-nav .footer-nav .footer-info
     width: 100%
 // .footer-nav .logo-clipped
 //   order: 1
@@ -634,12 +791,10 @@ article
   display: flex
   align-items: center
 
-
 .img-div
   width: 100px
   height: 100px
   overflow: hidden
-
 
 .logo-img-j,
 .logo-img-k
@@ -700,7 +855,6 @@ article
     animation: blink 2s infinite
     transform-origin: center
 
-
   circle.eye-left
     animation-delay: 0.2s
 
@@ -708,7 +862,7 @@ article
     animation-delay: 1s
 
   ellipse.mouth
-      animation: mouth 1s infinite
+    animation: mouth 1s infinite
 
   line.eyebrow-left,
   line.eyebrow-right
@@ -753,4 +907,3 @@ article
 @media screen and ( max-width: 768px )
   .footer-nav .nav
     display: none
-
