@@ -1,7 +1,7 @@
 {
   "name": "jujutsu-kaisen-uoc",
   "version": "1.0.0",
-  "description": "",
+  "description": "PAC2",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
@@ -15,7 +15,8 @@
     "lint": "eslint src --ext .js --quiet",
     "format": "prettier --write src/**/*.{js,css,sass,html,json,md}"
   },
-  "keywords": [],
+  "keywords": ["dev",
+  "tools"],
   "author": "Jose Antonio Marmol <joseantoniomarmol@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -31,11 +32,11 @@
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.5",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "sharp": "^0.31.3"
   },
   "dependencies": {
     "eslint": "^8.54.0",
-    "prettier": "^3.1.0",
-    "sharp": "^0.33.1"
+    "prettier": "^3.1.0"
   }
 }
