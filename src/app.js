@@ -29,22 +29,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 3000);
 });
-// document.querySelector(".side-menu").addEventListener("click", function () {
-//   var sideMenu = document.querySelector(".side-menu");
-//   var iframe = document.getElementById("ytIframe");
-
-//   sideMenu.classList.toggle("open");
-
-//   if (sideMenu.classList.contains("open")) {
-//     iframe.style.display = "none";
-//   } else {
-//     iframe.style.display = "block";
-//   }
-// });
-// window.addEventListener('resize', function() {
-//   var iframes = document.getElementsByTagName('iframe');
-//   for (var i = 0; i < iframes.length; i++) {
-//     var iframe = iframes[i];
-//     iframe.src = iframe.src;  // This will force the iframe to reload
-//   }
-// });
