@@ -4,7 +4,6 @@
         "chromaSubsampling": "4:4:4"
     },
     "webp": {
-        "nearLossless": true,
         "quality": 25
     },
     "png": {
