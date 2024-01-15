@@ -1,11 +1,22 @@
 {
     "extends": "@parcel/config-default",
     "transformers": {
-        "*.{svg}": ["@parcel/transformer-svg"]
-      },
-      "optimizers": {
-        "*.{svg}": ["@parcel/optimizer-svgo"]
-      },
+        "*.{svg}": [
+            "@parcel/transformer-svg"
+        ]
+    },
+    "optimizers": {
+        "*.js": [
+            "...",
+            "@parcel/optimizer-terser"
+        ],
+        "*.{svg}": ["@parcel/optimizer-svgo"],
+        "*.html": [
+            "...",
+            "@parcel/optimizer-htmlnano"
+        ]
+
+    },
     "compressors": {
         "*.{html,css,js,svg,map}": [
             "...",

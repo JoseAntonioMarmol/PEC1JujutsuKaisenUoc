@@ -22,6 +22,8 @@
   "author": "Jose Antonio Marmol <joseantoniomarmol@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/optimizer-cssnano": "^2.11.0",
+    "@parcel/optimizer-terser": "^2.11.0",
     "@parcel/packager-raw-url": "^2.10.1",
     "@parcel/transformer-sass": "^2.10.1",
     "@parcel/transformer-webmanifest": "^2.10.1",
@@ -78,5 +80,8 @@
     "htmlWhitespaceSensitivity": "css",
     "vueIndentScriptAndStyle": false,
     "endOfLine": "lf"
+  },
+  "@parcel/trasformer-css":{
+    "cssmodules": true
   }
 }
